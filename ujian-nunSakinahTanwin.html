@@ -10,254 +10,283 @@
 </head>
 
 <body>
-    <h1 class="flex justify-center pt-8 text-3xl font-bold">نون السّاكنة والتّنوين</h1>
-    <div class="border-b border-gray-300 py-2"></div>
-    <div class="flex flex-col items-center justify-center gap-8 m-4">
-        <!-- start sini -->
-        <div>
-            <div class="font-semibold text-lg">١- اختار احكام نون السّاكنة والتّنوين</div>
-            <div class="flex flex-col gap-2 mt-4">
-                <div class="p-2 border border-gray-300 rounded-md">
-                    <input type="checkbox" id="true">
-                    <span class="ml-2">الإظهار الحلقيّ</span>
-                </div>
-                <div class="p-2 border border-gray-300 rounded-md">
-                    <input type="checkbox">
-                    <span class="ml-2">الإظهار الشّفويّ</span>
-                </div>
-                <div class="p-2 border border-gray-300 rounded-md">
-                    <input type="checkbox">
-                    <span class="ml-2">الإدغام</span>
-                </div>
-                <div class="p-2 border border-gray-300 rounded-md">
-                    <input type="checkbox">
-                    <span class="ml-2">الإقلاب</span>
-                </div>
-                <div class="p-2 border border-gray-300 rounded-md">
-                    <input type="checkbox">
-                    <span class="ml-2">الإخفاء الحقيقيّ</span>
-                </div>
-                <div class="p-2 border border-gray-300 rounded-md">
-                    <input type="checkbox">
-                    <span class="ml-2">الإخفاء الشّفويّ</span>
-                </div>
-            </div>
-
+    <div id="app">
+        <h1 class="flex justify-center pt-8 text-4xl font-bold text-sky-700">نون السّاكنة والتّنوين</h1>
+        <div class=" border-b border-gray-300 py-2">
         </div>
-        <div>
-            <div class="font-semibold text-lg">٢- ماذا الحروف الإظهار الحلقيّ؟</div>
-            <div class="flex flex-col gap-2 mt-4">
-                <div class="p-2 border border-gray-300 rounded-md">
-                    <input type="checkbox" id="true">
-                    <span class="ml-2">الهمزة والهاء</span>
+        <div class="flex flex-col items-center justify-center gap-8 m-6 pb-10">
+            <!-- start sini -->
+            <div>
+                <div class="font-semibold text-lg">١- اختار احكام نون السّاكنة والتّنوين</div>
+                <div class="flex flex-col gap-2 mt-4">
+                    <div class="p-2 border border-gray-300 rounded-md">
+                        <input v-model="soalan1.jawapan1" type="checkbox">
+                        <span class="ml-2">الإظهار الحلقيّ</span>
+                    </div>
+                    <div class="p-2 border border-gray-300 rounded-md">
+                        <input v-model="soalan1.jawapan2" type="checkbox">
+                        <span class="ml-2">الإظهار الشّفويّ</span>
+                    </div>
+                    <div class="p-2 border border-gray-300 rounded-md">
+                        <input v-model="soalan1.jawapan3" type="checkbox">
+                        <span class="ml-2">الإدغام</span>
+                    </div>
+                    <div class="p-2 border border-gray-300 rounded-md">
+                        <input v-model="soalan1.jawapan4" type="checkbox">
+                        <span class="ml-2">الإقلاب</span>
+                    </div>
+                    <div class="p-2 border border-gray-300 rounded-md">
+                        <input v-model="soalan1.jawapan5" type="checkbox">
+                        <span class="ml-2">الإخفاء الحقيقيّ</span>
+                    </div>
+                    <div class="p-2 border border-gray-300 rounded-md">
+                        <input v-model="soalan1.jawapan6" type="checkbox">
+                        <span class="ml-2">الإخفاء الشّفويّ</span>
+                    </div>
                 </div>
-                <div class="p-2 border border-gray-300 rounded-md">
-                    <input type="checkbox">
-                    <span class="ml-2">العين والحاء</span>
-                </div>
-                <div class="p-2 border border-gray-300 rounded-md">
-                    <input type="checkbox">
-                    <span class="ml-2">النون والميم</span>
-                </div>
-                <div class="p-2 border border-gray-300 rounded-md">
-                    <input type="checkbox">
-                    <span class="ml-2">الألف</span>
-                </div>
-                <div class="p-2 border border-gray-300 rounded-md">
-                    <input type="checkbox">
-                    <span class="ml-2">الغين والخاء</span>
-                </div>
-                
-            </div>
 
+            </div>
+            <div>
+                <div class="font-semibold text-lg">٢- ماذا الحروف الإظهار الحلقيّ؟</div>
+                <div class="flex flex-col gap-2 mt-4">
+                    <div class="p-2 border border-gray-300 rounded-md">
+                        <input type="checkbox" id="true">
+                        <span class="ml-2">الهمزة والهاء</span>
+                    </div>
+                    <div class="p-2 border border-gray-300 rounded-md">
+                        <input type="checkbox">
+                        <span class="ml-2">العين والحاء</span>
+                    </div>
+                    <div class="p-2 border border-gray-300 rounded-md">
+                        <input type="checkbox">
+                        <span class="ml-2">النون والميم</span>
+                    </div>
+                    <div class="p-2 border border-gray-300 rounded-md">
+                        <input type="checkbox">
+                        <span class="ml-2">الألف</span>
+                    </div>
+                    <div class="p-2 border border-gray-300 rounded-md">
+                        <input type="checkbox">
+                        <span class="ml-2">الغين والخاء</span>
+                    </div>
+
+                </div>
+
+            </div>
+            <div>
+                <div class="font-semibold text-lg">٣- ماذا الحروف الإدغام؟</div>
+                <div class="flex flex-col gap-2 mt-4">
+                    <div class="p-2 border border-gray-300 rounded-md">
+                        <input type="checkbox" id="true">
+                        <span class="ml-2">الباء</span>
+                    </div>
+                    <div class="p-2 border border-gray-300 rounded-md">
+                        <input type="checkbox">
+                        <span class="ml-2">الياء والواو</span>
+                    </div>
+                    <div class="p-2 border border-gray-300 rounded-md">
+                        <input type="checkbox">
+                        <span class="ml-2">الراء واللام</span>
+                    </div>
+                    <div class="p-2 border border-gray-300 rounded-md">
+                        <input type="checkbox">
+                        <span class="ml-2">الميم والنون</span>
+                    </div>
+                </div>
+
+            </div>
+            <div>
+                <div class="font-semibold text-lg">٤- الحرف الإقلاب هو؟</div>
+                <div class="flex flex-col gap-2 mt-4">
+                    <div class="p-2 border border-gray-300 rounded-md">
+                        <input type="checkbox" id="true">
+                        <span class="ml-2">الفاء</span>
+                    </div>
+                    <div class="p-2 border border-gray-300 rounded-md">
+                        <input type="checkbox">
+                        <span class="ml-2">الدال</span>
+                    </div>
+                    <div class="p-2 border border-gray-300 rounded-md">
+                        <input type="checkbox">
+                        <span class="ml-2">الباء</span>
+                    </div>
+                    <div class="p-2 border border-gray-300 rounded-md">
+                        <input type="checkbox">
+                        <span class="ml-2">الكاف</span>
+                    </div>
+                </div>
+
+            </div>
+            <div>
+                <div class="font-semibold text-lg">ه- كم الحروف الإخفاء الحقيقيّ</div>
+                <div class="flex flex-col gap-2 mt-4">
+                    <div class="p-2 border border-gray-300 rounded-md">
+                        <input type="checkbox" id="true">
+                        <span class="ml-2">١٢</span>
+                    </div>
+                    <div class="p-2 border border-gray-300 rounded-md">
+                        <input type="checkbox">
+                        <span class="ml-2">١٣</span>
+                    </div>
+                    <div class="p-2 border border-gray-300 rounded-md">
+                        <input type="checkbox">
+                        <span class="ml-2">١٤</span>
+                    </div>
+                    <div class="p-2 border border-gray-300 rounded-md">
+                        <input type="checkbox">
+                        <span class="ml-2">١٥</span>
+                    </div>
+
+                </div>
+
+            </div>
+            <div>
+                <div class="font-semibold text-lg">٦- أمثلة الإظهار الحلقيّ</div>
+                <div class="flex flex-col gap-2 mt-4">
+                    <div class="p-2 border border-gray-300 rounded-md">
+                        <input type="checkbox" id="true">
+                        <span class="ml-2">مَنْ ءَامَنَ</span>
+                    </div>
+                    <div class="p-2 border border-gray-300 rounded-md">
+                        <input type="checkbox">
+                        <span class="ml-2">مِنْ هَادٍ</span>
+                    </div>
+                    <div class="p-2 border border-gray-300 rounded-md">
+                        <input type="checkbox">
+                        <span class="ml-2">مِن مَّالٍ</span>
+                    </div>
+                    <div class="p-2 border border-gray-300 rounded-md">
+                        <input type="checkbox">
+                        <span class="ml-2">قَوْمٍ هَادٍ</span>
+                    </div>
+                </div>
+
+            </div>
+            <div>
+                <div class="font-semibold text-lg">٧- أمثلة الإدغام بغنّة</div>
+                <div class="flex flex-col gap-2 mt-4">
+                    <div class="p-2 border border-gray-300 rounded-md">
+                        <input type="checkbox" id="true">
+                        <span class="ml-2">عَنْهُ</span>
+                    </div>
+                    <div class="p-2 border border-gray-300 rounded-md">
+                        <input type="checkbox">
+                        <span class="ml-2">فَمَن يَعْمَلْ</span>
+                    </div>
+                    <div class="p-2 border border-gray-300 rounded-md">
+                        <input type="checkbox">
+                        <span class="ml-2">خَيْرٌ مِّنْ</span>
+                    </div>
+                    <div class="p-2 border border-gray-300 rounded-md">
+                        <input type="checkbox">
+                        <span class="ml-2">مِن رَّبِّك</span>
+                    </div>
+
+                </div>
+
+            </div>
+            <div>
+                <div class="font-semibold text-lg">٨- أمثلة الإدغام بلا غنّة</div>
+                <div class="flex flex-col gap-2 mt-4">
+                    <div class="p-2 border border-gray-300 rounded-md">
+                        <input type="checkbox" id="true">
+                        <span class="ml-2">يسٓ</span>
+                    </div>
+                    <div class="p-2 border border-gray-300 rounded-md">
+                        <input type="checkbox">
+                        <span class="ml-2">مِن لَّدُنكَ</span>
+                    </div>
+                    <div class="p-2 border border-gray-300 rounded-md">
+                        <input type="checkbox">
+                        <span class="ml-2">عَلَيْهِ</span>
+                    </div>
+                    <div class="p-2 border border-gray-300 rounded-md">
+                        <input type="checkbox">
+                        <span class="ml-2">غَفُورُ رَّحِيمٌ</span>
+                    </div>
+
+                </div>
+
+            </div>
+            <div>
+                <div class="font-semibold text-lg">٩- امثلة الإقلاب</div>
+                <div class="flex flex-col gap-2 mt-4">
+                    <div class="p-2 border border-gray-300 rounded-md">
+                        <input type="checkbox" id="true">
+                        <span class="ml-2">مِنْ بَعْدِ</span>
+                    </div>
+                    <div class="p-2 border border-gray-300 rounded-md">
+                        <input type="checkbox">
+                        <span class="ml-2">مِن قَبْلِ</span>
+                    </div>
+                    <div class="p-2 border border-gray-300 rounded-md">
+                        <input type="checkbox">
+                        <span class="ml-2">مِنكُمْ</span>
+                    </div>
+                    <div class="p-2 border border-gray-300 rounded-md">
+                        <input type="checkbox">
+                        <span class="ml-2">أَنْ بُورِكَ</span>
+                    </div>
+
+                </div>
+
+            </div>
+            <div>
+                <div class="font-semibold text-lg">١٠- أمثلة الإخفاء الحقيقيّ</div>
+                <div class="flex flex-col gap-2 mt-4">
+                    <div class="p-2 border border-gray-300 rounded-md">
+                        <input type="checkbox" id="true">
+                        <span class="ml-2">تَبَعًا فَهَلْ</span>
+                    </div>
+                    <div class="p-2 border border-gray-300 rounded-md">
+                        <input type="checkbox">
+                        <span class="ml-2">شَيْءٍ قَدِيرٌ</span>
+                    </div>
+                    <div class="p-2 border border-gray-300 rounded-md">
+                        <input type="checkbox">
+                        <span class="ml-2">عَن طَبَقٍ</span>
+                    </div>
+                    <div class="p-2 border border-gray-300 rounded-md">
+                        <input type="checkbox">
+                        <span class="ml-2">عَنْهُ</span>
+                    </div>
+
+                </div>
+
+            </div>
         </div>
-        <div>
-            <div class="font-semibold text-lg">٣- ماذا الحروف الإدغام؟</div>
-            <div class="flex flex-col gap-2 mt-4">
-                <div class="p-2 border border-gray-300 rounded-md">
-                    <input type="checkbox" id="true">
-                    <span class="ml-2">الباء</span>
-                </div>
-                <div class="p-2 border border-gray-300 rounded-md">
-                    <input type="checkbox">
-                    <span class="ml-2">الياء والواو</span>
-                </div>
-                <div class="p-2 border border-gray-300 rounded-md">
-                    <input type="checkbox">
-                    <span class="ml-2">الراء واللام</span>
-                </div>
-                <div class="p-2 border border-gray-300 rounded-md">
-                    <input type="checkbox">
-                    <span class="ml-2">الميم والنون</span>
-                </div>
-            </div>
-
-        </div>
-        <div>
-            <div class="font-semibold text-lg">٤- الحرف الإقلاب هو؟</div>
-            <div class="flex flex-col gap-2 mt-4">
-                <div class="p-2 border border-gray-300 rounded-md">
-                    <input type="checkbox" id="true">
-                    <span class="ml-2">الفاء</span>
-                </div>
-                <div class="p-2 border border-gray-300 rounded-md">
-                    <input type="checkbox">
-                    <span class="ml-2">الدال</span>
-                </div>
-                <div class="p-2 border border-gray-300 rounded-md">
-                    <input type="checkbox">
-                    <span class="ml-2">الباء</span>
-                </div>
-                <div class="p-2 border border-gray-300 rounded-md">
-                    <input type="checkbox">
-                    <span class="ml-2">الكاف</span>
-                </div>
-            </div>
-
-        </div>
-        <div>
-            <div class="font-semibold text-lg">ه- كم الحروف الإخفاء الحقيقيّ</div>
-            <div class="flex flex-col gap-2 mt-4">
-                <div class="p-2 border border-gray-300 rounded-md">
-                    <input type="checkbox" id="true">
-                    <span class="ml-2">١٢</span>
-                </div>
-                <div class="p-2 border border-gray-300 rounded-md">
-                    <input type="checkbox">
-                    <span class="ml-2">١٣</span>
-                </div>
-                <div class="p-2 border border-gray-300 rounded-md">
-                    <input type="checkbox">
-                    <span class="ml-2">١٤</span>
-                </div>
-                <div class="p-2 border border-gray-300 rounded-md">
-                    <input type="checkbox">
-                    <span class="ml-2">١٥</span>
-                </div>
-                
-            </div>
-
-        </div>
-        <div>
-            <div class="font-semibold text-lg">٦- أمثلة الإظهار الحلقيّ</div>
-            <div class="flex flex-col gap-2 mt-4">
-                <div class="p-2 border border-gray-300 rounded-md">
-                    <input type="checkbox" id="true">
-                    <span class="ml-2">مَنْ ءَامَنَ</span>
-                </div>
-                <div class="p-2 border border-gray-300 rounded-md">
-                    <input type="checkbox">
-                    <span class="ml-2">مِنْ هَادٍ</span>
-                </div>
-                <div class="p-2 border border-gray-300 rounded-md">
-                    <input type="checkbox">
-                    <span class="ml-2">مِن مَّالٍ</span>
-                </div>
-                <div class="p-2 border border-gray-300 rounded-md">
-                    <input type="checkbox">
-                    <span class="ml-2">قَوْمٍ هَادٍ</span>
-                </div>
-            </div>
-
-        </div>
-        <div>
-            <div class="font-semibold text-lg">٧- أمثلة الإدغام بغنّة</div>
-            <div class="flex flex-col gap-2 mt-4">
-                <div class="p-2 border border-gray-300 rounded-md">
-                    <input type="checkbox" id="true">
-                    <span class="ml-2">عَنْهُ</span>
-                </div>
-                <div class="p-2 border border-gray-300 rounded-md">
-                    <input type="checkbox">
-                    <span class="ml-2">فَمَن يَعْمَلْ</span>
-                </div>
-                <div class="p-2 border border-gray-300 rounded-md">
-                    <input type="checkbox">
-                    <span class="ml-2">خَيْرٌ مِّنْ</span>
-                </div>
-                <div class="p-2 border border-gray-300 rounded-md">
-                    <input type="checkbox">
-                    <span class="ml-2">مِن رَّبِّك</span>
-                </div>
-                
-            </div>
-
-        </div>
-        <div>
-            <div class="font-semibold text-lg">٨- أمثلة الإدغام بلا غنّة</div>
-            <div class="flex flex-col gap-2 mt-4">
-                <div class="p-2 border border-gray-300 rounded-md">
-                    <input type="checkbox" id="true">
-                    <span class="ml-2">يسٓ</span>
-                </div>
-                <div class="p-2 border border-gray-300 rounded-md">
-                    <input type="checkbox">
-                    <span class="ml-2">مِن لَّدُنكَ</span>
-                </div>
-                <div class="p-2 border border-gray-300 rounded-md">
-                    <input type="checkbox">
-                    <span class="ml-2">عَلَيْهِ</span>
-                </div>
-                <div class="p-2 border border-gray-300 rounded-md">
-                    <input type="checkbox">
-                    <span class="ml-2">غَفُورُ رَّحِيمٌ</span>
-                </div>
-                
-            </div>
-
-        </div>
-        <div>
-            <div class="font-semibold text-lg">٩- امثلة الإقلاب</div>
-            <div class="flex flex-col gap-2 mt-4">
-                <div class="p-2 border border-gray-300 rounded-md">
-                    <input type="checkbox" id="true">
-                    <span class="ml-2">مِنْ بَعْدِ</span>
-                </div>
-                <div class="p-2 border border-gray-300 rounded-md">
-                    <input type="checkbox">
-                    <span class="ml-2">مِن قَبْلِ</span>
-                </div>
-                <div class="p-2 border border-gray-300 rounded-md">
-                    <input type="checkbox">
-                    <span class="ml-2">مِنكُمْ</span>
-                </div>
-                <div class="p-2 border border-gray-300 rounded-md">
-                    <input type="checkbox">
-                    <span class="ml-2">أَنْ بُورِكَ</span>
-                </div>
-                
-            </div>
-
-        </div>
-        <div>
-            <div class="font-semibold text-lg">١٠- أمثلة الإخفاء الحقيقيّ</div>
-            <div class="flex flex-col gap-2 mt-4">
-                <div class="p-2 border border-gray-300 rounded-md">
-                    <input type="checkbox" id="true">
-                    <span class="ml-2">تَبَعًا فَهَلْ</span>
-                </div>
-                <div class="p-2 border border-gray-300 rounded-md">
-                    <input type="checkbox">
-                    <span class="ml-2">شَيْءٍ قَدِيرٌ</span>
-                </div>
-                <div class="p-2 border border-gray-300 rounded-md">
-                    <input type="checkbox">
-                    <span class="ml-2">عَن طَبَقٍ</span>
-                </div>
-                <div class="p-2 border border-gray-300 rounded-md">
-                    <input type="checkbox">
-                    <span class="ml-2">عَنْهُ</span>
-                </div>
-                
-            </div>
-
+        <div class="mb-10 flex justify-center">
+            <button onclick="location.href='https://ahmad0216.github.io/myTajweed/ujian.html'"
+                class="px-8 py-3 bg-red-700 hover:bg-red-800 rounded-md text-2xl text-white shadow-lg font-bold">رجوع</button>
         </div>
     </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.7.14"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script>
-
+        var app = new Vue({
+            el: '#app',
+            data: {
+                soalan1: {
+                    jawapan1: "",
+                    jawapan2: "",
+                    jawapan3: "",
+                    jawapan4: "",
+                    jawapan5: "",
+                    jawapan6: "",
+                },
+                soalan2: "",
+                soalan3: "",
+                soalan4: "",
+                soalan5: "",
+                soalan6: "",
+                soalan7: "",
+                soalan8: "",
+                soalan9: "",
+                soalan10: "",
+            },
+            watch: {}
+        });
     </script>
-    <button onclick="location.href='https://ahmad0216.github.io/myTajweed/ujian.html'" class="px-6 py-3 bg-sky-700 hover:bg-sky-800 rounded-md text-2xl text-white shadow-lg">رجوع</button>
 </body>
 
 </html>
