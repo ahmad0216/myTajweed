@@ -10,163 +10,338 @@
 </head>
 
 <body>
-    <h1 class="flex justify-center pt-8 text-3xl font-bold">مخارج الحروف العربية</h1>
-    <div class="border-b border-gray-300 py-2"></div>
-    <div class="flex flex-col items-center justify-center gap-8 m-4">
-        <!-- start sini -->
-        <div>
-            <div class="font-semibold text-lg">١- كم المخارج الرّئيسة للحروف العربية؟</div>
+    <div id="app">
+        <h1 class="flex justify-center pt-8 text-4xl font-bold text-sky-700">مخارج الحروف العربية</h1>
+        <div class="border-b border-gray-300 py-2"></div>
+        <div class="flex flex-col items-end justify-center gap-8 m-6 pb-10">
             <div>
-                <input type="radio" name="s1">
-                <span class="ml-2">تلاثة</span>
+                <div class="font-bold text-xl">١- كم المخارج الرّئيسة للحروف العربية؟</div>
+                <div class="flex items-center justify-end gap-2">
+                    <span class="ml-2">تلاثة</span>
+                    <input v-model="soalan1" type="radio" name="soalan1" value="a">
+                </div>
+                <div class="flex items-center justify-end gap-2">
+                    <span class="ml-2">اربعة</span>
+                    <input v-model="soalan1" type="radio" name="soalan1" value="b">
+                </div>
+                <div class="flex items-center justify-end gap-2">
+                    <span class="ml-2">خمسة</span>
+                    <input v-model="soalan1" type="radio" name="soalan1" value="c">
+                </div>
+            </div>
+
+            <div>
+                <div class="font-bold text-xl">٢- اختار مخارج الحروف الصّحيحة</div>
+                <div class="flex items-center justify-end gap-2">
+                    <span class="ml-2">الحلق، الجوف، اللّسان، الشّفتان، الخيشوم</span>
+                    <input v-model="soalan2" type="radio" name="soalan2" value="a">
+                </div>
+                <div class="flex items-center justify-end gap-2">
+                    <span class="ml-2">الحلق، الجوف، اللّسان، الخيشوم، الشّفتان</span>
+                    <input v-model="soalan2" type="radio" name="soalan2" value="b">
+                </div>
+                <div class="flex items-center justify-end gap-2">
+                    <span class="ml-2">الجوف، الحلق، اللّسان، الشّفتان، الخيشوم</span>
+                    <input v-model="soalan2" type="radio" name="soalan2" value="c">
+                </div>
             </div>
             <div>
-                <input type="radio" name="s1">
-                <span class="ml-2">اربعة</span>
+                <div class="font-bold text-md">٣- يخرج حرف الألف المدّيّة والواو المدّيّة والياء المدّيّة في؟</div>
+                <div class="flex items-center justify-end gap-2">
+                    <span class="ml-2">الجوف</span>
+                    <input v-model="soalan3" type="radio" name="soalan3" value="a">
+                </div>
+                <div class="flex items-center justify-end gap-2">
+                    <span class="ml-2">الحلق</span>
+                    <input v-model="soalan3" type="radio" name="soalan3" value="b">
+                </div>
+                <div class="flex items-center justify-end gap-2">
+                    <span class="ml-2">الخيشومم</span>
+                    <input v-model="soalan3" type="radio" name="soalan3" value="c">
+                </div>
             </div>
             <div>
-                <input type="radio" name="s1">
-                <span class="ml-2">خمسة</span>
+                <div class="font-bold text-xl">٤- الحروف في أدنى الحلق هي؟</div>
+                <div class="flex items-center justify-end gap-2">
+                    <span class="ml-2">الهمزة والهاء</span>
+                    <input v-model="soalan4" type="radio" name="soalan4" value="a">
+                </div>
+                <div class="flex items-center justify-end gap-2">
+                    <span class="ml-2">العين والحاء</span>
+                    <input v-model="soalan4" type="radio" name="soalan4" value="b">
+                </div>
+                <div class="flex items-center justify-end gap-2">
+                    <span class="ml-2">الغين والخاء</span>
+                    <input v-model="soalan4" type="radio" name="soalan4" value="c">
+                </div>
+            </div>
+            <div>
+                <div class="font-bold text-xl">٥- يخرج الحرف في أقصى اللّسان مع الحنك اللّحميّ هي؟</div>
+                <div class="flex items-center justify-end gap-2">
+                    <span class="ml-2">الكاف</span>
+                    <input v-model="soalan5" type="radio" name="soalan5" value="a">
+                </div>
+                <div class="flex items-center justify-end gap-2">
+                    <span class="ml-2">القاف</span>
+                    <input v-model="soalan5" type="radio" name="soalan5" value="b">
+                </div>
+                <div class="flex items-center justify-end gap-2">
+                    <span class="ml-2">الجيم</span>
+                    <input v-model="soalan5" type="radio" name="soalan5" value="c">
+                </div>
+            </div>
+            <div>
+                <div class="font-bold text-xl">٦- الحرف طرف اللّسان مع أطراف الثنايا العليا هو؟</div>
+                <div class="flex items-center justify-end gap-2">
+                    <span class="ml-2">الثاء والذال والظاء</span>
+                    <input v-model="soalan6" type="radio" name="soalan6" value="a">
+                </div>
+                <div class="flex items-center justify-end gap-2">
+                    <span class="ml-2">اللام وانون والراء</span>
+                    <input v-model="soalan6" type="radio" name="soalan6" value="b">
+                </div>
+                <div class="flex items-center justify-end gap-2">
+                    <span class="ml-2">الضاض</span>
+                    <input v-model="soalan6" type="radio" name="soalan6" value="c">
+                </div>
+            </div>
+            <div>
+                <div class="font-bold text-xl">٧- الحروف في الشّفتان هي؟</div>
+                <div class="flex items-center justify-end gap-2">
+                    <span class="ml-2">الميم و النون</span>
+                    <input v-model="soalan7" type="radio" name="soalan7" value="a">
+                </div>
+                <div class="flex items-center justify-end gap-2">
+                    <span class="ml-2">الألف</span>
+                    <input v-model="soalan7" type="radio" name="soalan7" value="b">
+                </div>
+                <div class="flex items-center justify-end gap-2">
+                    <span class="ml-2">الباء والواو والميم و الفاء</span>
+                    <input v-model="soalan7" type="radio" name="soalan7" value="c">
+                </div>
+            </div>
+            <div>
+                <div class="font-bold text-xl">٨- الحرف حافة اللّسان مع الأضراس العليا هو؟</div>
+                <div class="flex items-center justify-end gap-2">
+                    <span class="ml-2">الضاض</span>
+                    <input v-model="soalan8" type="radio" name="soalan8" value="a">
+                </div>
+                <div class="flex items-center justify-end gap-2">
+                    <span class="ml-2">الصاد</span>
+                    <input v-model="soalan8" type="radio" name="soalan8" value="b">
+                </div>
+                <div class="flex items-center justify-end gap-2">
+                    <span class="ml-2">اللّام</span>
+                    <input v-model="soalan8" type="radio" name="soalan8" value="c">
+                </div>
+            </div>
+            <div>
+                <div class="font-bold text-xl">٩- الحرف الواو غير المدّيّة في؟</div>
+                <div class="flex items-center justify-end gap-2">
+                    <span class="ml-2">الشّفتان</span>
+                    <input v-model="soalan9" type="radio" name="soalan9" value="a">
+                </div>
+                <div class="flex items-center justify-end gap-2">
+                    <span class="ml-2">الجوف</span>
+                    <input v-model="soalan9" type="radio" name="soalan9" value="b">
+                </div>
+                <div class="flex items-center justify-end gap-2">
+                    <span class="ml-2">الخيشوم</span>
+                    <input v-model="soalan9" type="radio" name="soalan9" value="c">
+                </div>
+            </div>
+            <div>
+                <div class="font-bold text-xl">١٠- الحروف الخيشوم هي؟</div>
+                <div class="flex items-center justify-end gap-2">
+                    <span class="ml-2">الألف</span>
+                    <input v-model="soalan10" type="radio" name="soalan10" value="a">
+                </div>
+                <div class="flex items-center justify-end gap-2">
+                    <span class="ml-2">النون والميم</span>
+                    <input v-model="soalan10" type="radio" name="soalan10" value="b">
+                </div>
+                <div class="flex items-center justify-end gap-2">
+                    <span class="ml-2">العين</span>
+                    <input v-model="soalan10" type="radio" name="soalan10" value="c">
+                </div>
             </div>
         </div>
-        <!-- habis sini -->
-        <div>
-            <div class="font-semibold text-lg">٢- اختار مخارج الحروف الصّحيحة</div>
-            <div>
-                <input type="radio" name="s2">
-                <span class="ml-2">الحلق، الجوف، اللّسان، الشّفتان، الخيشوم</span>
-            </div>
-            <div>
-                <input type="radio" name="s2">
-                <span class="ml-2">الحلق، الجوف، اللّسان، الخيشوم، الشّفتان</span>
-            </div>
-            <div>
-                <input type="radio" name="s2">
-                <span class="ml-2">الجوف، الحلق، اللّسان، الشّفتان، الخيشوم</span>
-            </div>
-        </div>
-        <div>
-            <div class="font-semibold text-lg">٣- يخرج حرف الألف المدّيّة والواو المدّيّة والياء المدّيّة في؟</div>
-            <div>
-                <input type="radio" name="s1">
-                <span class="ml-2">الجوف</span>
-            </div>
-            <div>
-                <input type="radio" name="s1">
-                <span class="ml-2">الحلق</span>
-            </div>
-            <div>
-                <input type="radio" name="s1">
-                <span class="ml-2">الخيشومم</span>
-            </div>
-        </div>
-        <div>
-            <div class="font-semibold text-lg">٤- الحروف في أدنى الحلق هي؟</div>
-            <div>
-                <input type="radio" name="s1">
-                <span class="ml-2">الهمزة والهاء</span>
-            </div>
-            <div>
-                <input type="radio" name="s1">
-                <span class="ml-2">العين والحاء</span>
-            </div>
-            <div>
-                <input type="radio" name="s1">
-                <span class="ml-2">الغين والخاء</span>
-            </div>
-        </div>
-        <div>
-            <div class="font-semibold text-lg">٥- يخرج الحرف في أقصى اللّسان مع الحنك اللّحميّ هي؟</div>
-            <div>
-                <input type="radio" name="s1">
-                <span class="ml-2">الكاف</span>
-            </div>
-            <div>
-                <input type="radio" name="s1">
-                <span class="ml-2">القاف</span>
-            </div>
-            <div>
-                <input type="radio" name="s1">
-                <span class="ml-2">الجيم</span>
-            </div>
-        </div>
-        <div>
-            <div class="font-semibold text-lg">٦- الحرف طرف اللّسان مع أطراف الثنايا العليا هو؟</div>
-            <div>
-                <input type="radio" name="s1">
-                <span class="ml-2">الثاء والذال والظاء</span>
-            </div>
-            <div>
-                <input type="radio" name="s1">
-                <span class="ml-2">اللام وانون والراء</span>
-            </div>
-            <div>
-                <input type="radio" name="s1">
-                <span class="ml-2">الضاض</span>
-            </div>
-        </div>
-        <div>
-            <div class="font-semibold text-lg">٧- الحروف في الشّفتان هي؟</div>
-            <div>
-                <input type="radio" name="s1">
-                <span class="ml-2">الميم و النون</span>
-            </div>
-            <div>
-                <input type="radio" name="s1">
-                <span class="ml-2">الألف</span>
-            </div>
-            <div>
-                <input type="radio" name="s1">
-                <span class="ml-2">الباء والواو والميم و الفاء</span>
-            </div>
-        </div>
-        <div>
-            <div class="font-semibold text-lg">٨- الحرف حافة اللّسان مع الأضراس العليا هو؟</div>
-            <div>
-                <input type="radio" name="s1">
-                <span class="ml-2">الضاض</span>
-            </div>
-            <div>
-                <input type="radio" name="s1">
-                <span class="ml-2">الصاد</span>
-            </div>
-            <div>
-                <input type="radio" name="s1">
-                <span class="ml-2">اللّام</span>
-            </div>
-        </div>
-        <div>
-            <div class="font-semibold text-lg">٩- الحرف الواو غير المدّيّة في؟</div>
-            <div>
-                <input type="radio" name="s1">
-                <span class="ml-2">الشّفتان</span>
-            </div>
-            <div>
-                <input type="radio" name="s1">
-                <span class="ml-2">الجوف</span>
-            </div>
-            <div>
-                <input type="radio" name="s1">
-                <span class="ml-2">الخيشوم</span>
-            </div>
-        </div>
-        <div>
-            <div class="font-semibold text-lg">١٠- الحروف الخيشوم هي؟</div>
-            <div>
-                <input type="radio" name="s1">
-                <span class="ml-2">الألف</span>
-            </div>
-            <div>
-                <input type="radio" name="s1">
-                <span class="ml-2">النون والميم</span>
-            </div>
-            <div>
-                <input type="radio" name="s1">
-                <span class="ml-2">العين</span>
-            </div>
+        <div class="mb-10 flex justify-center">
+            <button onclick="location.href='https://ahmad0216.github.io/myTajweed/ujian.html'"
+                class="px-8 py-3 bg-red-700 hover:bg-red-800 rounded-md text-3xl text-white shadow-lg font-bold">رجوع</button>
         </div>
     </div>
-    <button onclick="location.href='https://ahmad0216.github.io/myTajweed/ujian.html'" class="px-6 py-3 bg-sky-700 hover:bg-sky-800 rounded-md text-2xl text-white shadow-lg">رجوع</button>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.7.14"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script>
+        var app = new Vue({
+            el: '#app',
+            data: {
+                soalan1: "",
+                soalan2: "",
+                soalan3: "",
+                soalan4: "",
+                soalan5: "",
+                soalan6: "",
+                soalan7: "",
+                soalan8: "",
+                soalan9: "",
+                soalan10: "",
+            },
+            watch: {
+                'soalan1': function (value) {
+                    if (value == 'c') {
+                        Swal.fire(
+                            'Good job!',
+                            'You clicked the button!',
+                            'success'
+                        )
+                    } else {
+                        Swal.fire(
+                            'Good job!',
+                            'You clicked the button!',
+                            'error'
+                        )
+                    }
+                },
+                'soalan2': function (value) {
+                    if (value == 'c') {
+                        Swal.fire(
+                            'Good job!',
+                            'You clicked the button!',
+                            'success'
+                        )
+                    } else {
+                        Swal.fire(
+                            'Good job!',
+                            'You clicked the button!',
+                            'error'
+                        )
+                    }
+                },
+                'soalan3': function (value) {
+                    if (value == 'a') {
+                        Swal.fire(
+                            'Good job!',
+                            'You clicked the button!',
+                            'success'
+                        )
+                    } else {
+                        Swal.fire(
+                            'Good job!',
+                            'You clicked the button!',
+                            'error'
+                        )
+                    }
+                },
+                'soalan4': function (value) {
+                    if (value == 'c') {
+                        Swal.fire(
+                            'Good job!',
+                            'You clicked the button!',
+                            'success'
+                        )
+                    } else {
+                        Swal.fire(
+                            'Good job!',
+                            'You clicked the button!',
+                            'error'
+                        )
+                    }
+                },
+                'soalan5': function (value) {
+                    if (value == 'b') {
+                        Swal.fire(
+                            'Good job!',
+                            'You clicked the button!',
+                            'success'
+                        )
+                    } else {
+                        Swal.fire(
+                            'Good job!',
+                            'You clicked the button!',
+                            'error'
+                        )
+                    }
+                },
+                'soalan6': function (value) {
+                    if (value == 'a') {
+                        Swal.fire(
+                            'Good job!',
+                            'You clicked the button!',
+                            'success'
+                        )
+                    } else {
+                        Swal.fire(
+                            'Good job!',
+                            'You clicked the button!',
+                            'error'
+                        )
+                    }
+                },
+                'soalan7': function (value) {
+                    if (value == 'c') {
+                        Swal.fire(
+                            'Good job!',
+                            'You clicked the button!',
+                            'success'
+                        )
+                    } else {
+                        Swal.fire(
+                            'Good job!',
+                            'You clicked the button!',
+                            'error'
+                        )
+                    }
+                },
+                'soalan8': function (value) {
+                    if (value == 'a') {
+                        Swal.fire(
+                            'Good job!',
+                            'You clicked the button!',
+                            'success'
+                        )
+                    } else {
+                        Swal.fire(
+                            'Good job!',
+                            'You clicked the button!',
+                            'error'
+                        )
+                    }
+                },
+                'soalan9': function (value) {
+                    if (value == 'a') {
+                        Swal.fire(
+                            'Good job!',
+                            'You clicked the button!',
+                            'success'
+                        )
+                    } else {
+                        Swal.fire(
+                            'Good job!',
+                            'You clicked the button!',
+                            'error'
+                        )
+                    }
+                },
+                'soalan10': function (value) {
+                    if (value == 'b') {
+                        Swal.fire(
+                            'Good job!',
+                            'You clicked the button!',
+                            'success'
+                        )
+                    } else {
+                        Swal.fire(
+                            'Good job!',
+                            'You clicked the button!',
+                            'error'
+                        )
+                    }
+                }
+            }
+        })
+    </script>
 </body>
 
 </html>
