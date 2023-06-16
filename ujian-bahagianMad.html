@@ -17,7 +17,6 @@
             <!-- start sini -->
             <div>
                 <div class="font-semibold text-lg">١- كم اقسام المد؟</div>
-                <!-- terbalikkan <span> </span> duduk atas <input> bawah -->
                 <div class="flex items-center justify-end gap-2">
                     <span  class="ml-2">قسمان</span>
                     <input v-model="soalan1" type="radio" name="soalan1" value="a">
@@ -36,63 +35,68 @@
             <!-- habis sini -->
             <div>
                 <div class="font-semibold text-lg">٢- ماذا تعريف المد؟</div>
-                <div>
+                <div class="flex items-center justify-end gap-2">
                     <span class="ml-2">الترتيل</span>
-                    <input type="radio" name="s2">
+                    <input v-model="soalan2" type="radio" name="soalan2" value="a">
                 </div>
 
-                <div>
+                <div class="flex items-center justify-end gap-2">
                     <span class="ml-2">التحسين</span>
-                    <input type="radio" name="s2">
+                    <input v-model="soalan2" type="radio" name="soalan2" value="b">
                 </div>
-                <div>
+                
+                <div class="flex items-center justify-end gap-2">
                     <span class="ml-2">اطالة الصوت</span>
-                    <input type="radio" name="s2">
+                    <input v-model="soalan2" type="radio" name="soalan2" value="c">
                 </div>
             </div>
             <div>
                 <div class="font-semibold text-lg">٣- اختار حروف المد</div>
                 <div>
+                    <div class="flex items-center justify-end gap-2">
                     <span class="ml-2">القاف والباء</span>
-                    <input type="radio" name="s1">
+                    <input v-model="soalan3" type="radio" name="soalan3" value="a">
                 </div>
-                <div>
+                    
+                <div class="flex items-center justify-end gap-2">
                     <span class="ml-2">الألف والواو</span>
-                    <input type="radio" name="s1">
+                    <input v-model="soalan3" type="radio" name="soalan3" value="b">
                 </div>
-                <div>
+                <div class="flex items-center justify-end gap-2">
                     <span class="ml-2">الألف والواو واياء</span>
-                    <input type="radio" name="s1">
+                    <input v-model="soalan3" type="radio" name="soalan3" value="c">
                 </div>
             </div>
             <div>
                 <div class="font-semibold text-lg">٤- أمثلة المد الواجب المتصل</div>
                 <div>
+                    <div class="flex items-center justify-end gap-2">
                     <span class="ml-2">جَآءَ</span>
-                    <input type="radio" name="s1">
+                    <input v-model="soalan4" type="radio" name="soalan4" value="a">
                 </div>
                 <div>
                     <span class="ml-2">بِمَآ أُنزِل</span>
-                    <input type="radio" name="s1">
+                    <input v-model="soalan4" type="radio" name="soalan4" value="b">
                 </div>
-                <div>
+                <div class="flex items-center justify-end gap-2">
                     <span class="ml-2">فِيٓ أَنفُسِكُمْ</span>
-                    <input type="radio" name="s1">
+                    <input v-model="soalan4" type="radio" name="soalan4" value="c">
                 </div>
             </div>
             <div>
-                <div class="font-semibold text-lg">كم مقدار حركة المد الجائز المنفصل؟</div>
-                <div>
+                <div class="font-semibold text-lg">٥- كم مقدار حركة المد الجائز المنفصل؟</div>
+                <div class="flex items-center justify-end gap-2">
                     <span class="ml-2">حركتين</span>
-                    <input type="radio" name="s1">
+                    <input v-model="soalan5" type="radio" name="soalan5" value="a">
                 </div>
-                <div>
+                <div class="flex items-center justify-end gap-2">
                     <span class="ml-2">٤/٥ حركات</span>
-                    <input type="radio" name="s1">
+                    <input v-model="soalan5" type="radio" name="soalan5" value="b">
                 </div>
-                <div>
+
+                <div class="flex items-center justify-end gap-2">
                     <span class="ml-2">٦ حركات</span>
-                    <input type="radio" name="s1">
+                    <input v-model="soalan5" type="radio" name="soalan5" value="c">
                 </div>
             </div>
         </div>
