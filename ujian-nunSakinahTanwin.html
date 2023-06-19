@@ -14,195 +14,78 @@
         <h1 class="flex justify-center pt-8 text-4xl font-bold text-sky-700">نون السّاكنة والتّنوين</h1>
         <div class=" border-b border-gray-300 py-2">
         </div>
-        <div class="flex flex-col items-center justify-center gap-8 m-6 pb-10">
+        <div class="flex flex-col items-end justify-center gap-8 m-6 pb-10">
             <!-- start sini -->
             <div>
                 <div class="font-semibold text-lg">١- اختار احكام نون السّاكنة والتّنوين</div>
-                <div class="flex flex-col gap-2 mt-4">
+                <div class="flex flex-col items-end gap-2 mt-4">
                     <div class="p-2 border border-gray-300 rounded-md">
-                        <input v-model="soalan1.jawapan1" type="checkbox">
                         <span class="ml-2">الإظهار الحلقيّ</span>
+                        <input v-model="soalan1.jawapan1" type="checkbox">
                     </div>
                     <div class="p-2 border border-gray-300 rounded-md">
-                        <input v-model="soalan1.jawapan2" type="checkbox">
                         <span class="ml-2">الإظهار الشّفويّ</span>
+                        <input v-model="soalan1.jawapan2" type="checkbox">
                     </div>
                     <div class="p-2 border border-gray-300 rounded-md">
-                        <input v-model="soalan1.jawapan3" type="checkbox">
                         <span class="ml-2">الإدغام</span>
+                        <input v-model="soalan1.jawapan3" type="checkbox">
                     </div>
                     <div class="p-2 border border-gray-300 rounded-md">
-                        <input v-model="soalan1.jawapan4" type="checkbox">
                         <span class="ml-2">الإقلاب</span>
+                        <input v-model="soalan1.jawapan4" type="checkbox">
                     </div>
                     <div class="p-2 border border-gray-300 rounded-md">
-                        <input v-model="soalan1.jawapan5" type="checkbox">
                         <span class="ml-2">الإخفاء الحقيقيّ</span>
+                        <input v-model="soalan1.jawapan5" type="checkbox">
                     </div>
                     <div class="p-2 border border-gray-300 rounded-md">
-                        <input v-model="soalan1.jawapan6" type="checkbox">
                         <span class="ml-2">الإخفاء الشّفويّ</span>
+                        <input v-model="soalan1.jawapan6" type="checkbox">
                     </div>
-                </div>
-
-            </div>
-            <div>
-                <div class="font-semibold text-lg">٢- ماذا الحروف الإظهار الحلقيّ؟</div>
-                <div class="flex flex-col gap-2 mt-4">
-                    <div class="p-2 border border-gray-300 rounded-md">
-                        <input type="checkbox" id="true">
-                        <span class="ml-2">الهمزة والهاء</span>
-                    </div>
-                    <div class="p-2 border border-gray-300 rounded-md">
-                        <input type="checkbox">
-                        <span class="ml-2">العين والحاء</span>
-                    </div>
-                    <div class="p-2 border border-gray-300 rounded-md">
-                        <input type="checkbox">
-                        <span class="ml-2">النون والميم</span>
-                    </div>
-                    <div class="p-2 border border-gray-300 rounded-md">
-                        <input type="checkbox">
-                        <span class="ml-2">الألف</span>
-                    </div>
-                    <div class="p-2 border border-gray-300 rounded-md">
-                        <input type="checkbox">
-                        <span class="ml-2">الغين والخاء</span>
-                    </div>
-
-                </div>
-
-            </div>
-            <div>
-                <div class="font-semibold text-lg">٣- ماذا الحروف الإدغام؟</div>
-                <div class="flex flex-col gap-2 mt-4">
-                    <div class="p-2 border border-gray-300 rounded-md">
-                        <input type="checkbox" id="true">
-                        <span class="ml-2">الباء</span>
-                    </div>
-                    <div class="p-2 border border-gray-300 rounded-md">
-                        <input type="checkbox">
-                        <span class="ml-2">الياء والواو</span>
-                    </div>
-                    <div class="p-2 border border-gray-300 rounded-md">
-                        <input type="checkbox">
-                        <span class="ml-2">الراء واللام</span>
-                    </div>
-                    <div class="p-2 border border-gray-300 rounded-md">
-                        <input type="checkbox">
-                        <span class="ml-2">الميم والنون</span>
-                    </div>
-                </div>
-
-            </div>
-            <div>
-                <div class="font-semibold text-lg">٤- الحرف الإقلاب هو؟</div>
-                <div class="flex flex-col gap-2 mt-4">
-                    <div class="p-2 border border-gray-300 rounded-md">
-                        <input type="checkbox" id="true">
-                        <span class="ml-2">الفاء</span>
-                    </div>
-                    <div class="p-2 border border-gray-300 rounded-md">
-                        <input type="checkbox">
-                        <span class="ml-2">الدال</span>
-                    </div>
-                    <div class="p-2 border border-gray-300 rounded-md">
-                        <input type="checkbox">
-                        <span class="ml-2">الباء</span>
-                    </div>
-                    <div class="p-2 border border-gray-300 rounded-md">
-                        <input type="checkbox">
-                        <span class="ml-2">الكاف</span>
-                    </div>
-                </div>
-
-            </div>
-            <div>
-                <div class="font-semibold text-lg">ه- كم الحروف الإخفاء الحقيقيّ</div>
-                <div class="flex flex-col gap-2 mt-4">
-                    <div class="p-2 border border-gray-300 rounded-md">
-                        <input type="checkbox" id="true">
-                        <span class="ml-2">١٢</span>
-                    </div>
-                    <div class="p-2 border border-gray-300 rounded-md">
-                        <input type="checkbox">
-                        <span class="ml-2">١٣</span>
-                    </div>
-                    <div class="p-2 border border-gray-300 rounded-md">
-                        <input type="checkbox">
-                        <span class="ml-2">١٤</span>
-                    </div>
-                    <div class="p-2 border border-gray-300 rounded-md">
-                        <input type="checkbox">
-                        <span class="ml-2">١٥</span>
-                    </div>
-
                 </div>
 
             </div>
             <div>
                 <div class="font-semibold text-lg">٦- أمثلة الإظهار الحلقيّ</div>
-                <div class="flex flex-col gap-2 mt-4">
+                <div class="flex flex-col items-end gap-2 mt-4">
                     <div class="p-2 border border-gray-300 rounded-md">
-                        <input type="checkbox" id="true">
                         <span class="ml-2">مَنْ ءَامَنَ</span>
+                        <input v-model="soalan2.jawapan1" type="checkbox" id="true">
                     </div>
                     <div class="p-2 border border-gray-300 rounded-md">
-                        <input type="checkbox">
                         <span class="ml-2">مِنْ هَادٍ</span>
+                        <input v-model="soalan2.jawapan2" type="checkbox">
                     </div>
                     <div class="p-2 border border-gray-300 rounded-md">
-                        <input type="checkbox">
                         <span class="ml-2">مِن مَّالٍ</span>
+                        <input v-model="soalan2.jawapan3" type="checkbox">
                     </div>
                     <div class="p-2 border border-gray-300 rounded-md">
-                        <input type="checkbox">
                         <span class="ml-2">قَوْمٍ هَادٍ</span>
+                        <input v-model="soalan2.jawapan4" type="checkbox">
                     </div>
                 </div>
 
             </div>
             <div>
                 <div class="font-semibold text-lg">٧- أمثلة الإدغام بغنّة</div>
-                <div class="flex flex-col gap-2 mt-4">
+                <div class="flex flex-col items-end gap-2 mt-4">
                     <div class="p-2 border border-gray-300 rounded-md">
-                        <input type="checkbox" id="true">
                         <span class="ml-2">عَنْهُ</span>
+                        <input v-model="soalan3.jawapan1" type="checkbox" id="true">
                     </div>
                     <div class="p-2 border border-gray-300 rounded-md">
-                        <input type="checkbox">
                         <span class="ml-2">فَمَن يَعْمَلْ</span>
+                        <input v-model="soalan3.jawapan2" type="checkbox">
                     </div>
                     <div class="p-2 border border-gray-300 rounded-md">
-                        <input type="checkbox">
                         <span class="ml-2">خَيْرٌ مِّنْ</span>
+                        <input v-model="soalan3.jawapan3" type="checkbox">
                     </div>
                     <div class="p-2 border border-gray-300 rounded-md">
-                        <input type="checkbox">
                         <span class="ml-2">مِن رَّبِّك</span>
-                    </div>
-
-                </div>
-
-            </div>
-            <div>
-                <div class="font-semibold text-lg">٨- أمثلة الإدغام بلا غنّة</div>
-                <div class="flex flex-col gap-2 mt-4">
-                    <div class="p-2 border border-gray-300 rounded-md">
-                        <input type="checkbox" id="true">
-                        <span class="ml-2">يسٓ</span>
-                    </div>
-                    <div class="p-2 border border-gray-300 rounded-md">
-                        <input type="checkbox">
-                        <span class="ml-2">مِن لَّدُنكَ</span>
-                    </div>
-                    <div class="p-2 border border-gray-300 rounded-md">
-                        <input type="checkbox">
-                        <span class="ml-2">عَلَيْهِ</span>
-                    </div>
-                    <div class="p-2 border border-gray-300 rounded-md">
-                        <input type="checkbox">
-                        <span class="ml-2">غَفُورُ رَّحِيمٌ</span>
+                        <input v-model="soalan3.jawapan4" type="checkbox">
                     </div>
 
                 </div>
@@ -210,22 +93,22 @@
             </div>
             <div>
                 <div class="font-semibold text-lg">٩- امثلة الإقلاب</div>
-                <div class="flex flex-col gap-2 mt-4">
+                <div class="flex flex-col items-end gap-2 mt-4">
                     <div class="p-2 border border-gray-300 rounded-md">
-                        <input type="checkbox" id="true">
                         <span class="ml-2">مِنْ بَعْدِ</span>
+                        <input v-model="soalan4.jawapan1" type="checkbox" id="true">
                     </div>
                     <div class="p-2 border border-gray-300 rounded-md">
-                        <input type="checkbox">
                         <span class="ml-2">مِن قَبْلِ</span>
+                        <input v-model="soalan4.jawapan2" type="checkbox">
                     </div>
                     <div class="p-2 border border-gray-300 rounded-md">
-                        <input type="checkbox">
                         <span class="ml-2">مِنكُمْ</span>
+                        <input v-model="soalan4.jawapan3" type="checkbox">
                     </div>
                     <div class="p-2 border border-gray-300 rounded-md">
-                        <input type="checkbox">
                         <span class="ml-2">أَنْ بُورِكَ</span>
+                        <input v-model="soalan4.jawapan4" type="checkbox">
                     </div>
 
                 </div>
@@ -233,22 +116,22 @@
             </div>
             <div>
                 <div class="font-semibold text-lg">١٠- أمثلة الإخفاء الحقيقيّ</div>
-                <div class="flex flex-col gap-2 mt-4">
+                <div class="flex flex-col items-end gap-2 mt-4">
                     <div class="p-2 border border-gray-300 rounded-md">
-                        <input type="checkbox" id="true">
                         <span class="ml-2">تَبَعًا فَهَلْ</span>
+                        <input v-model="soalan5.jawapan1" type="checkbox" id="true">
                     </div>
                     <div class="p-2 border border-gray-300 rounded-md">
-                        <input type="checkbox">
                         <span class="ml-2">شَيْءٍ قَدِيرٌ</span>
+                        <input v-model="soalan5.jawapan2" type="checkbox">
                     </div>
                     <div class="p-2 border border-gray-300 rounded-md">
-                        <input type="checkbox">
                         <span class="ml-2">عَن طَبَقٍ</span>
+                        <input v-model="soalan5.jawapan3" type="checkbox">
                     </div>
                     <div class="p-2 border border-gray-300 rounded-md">
-                        <input type="checkbox">
                         <span class="ml-2">عَنْهُ</span>
+                        <input v-model="soalan5.jawapan4" type="checkbox">
                     </div>
 
                 </div>
@@ -274,17 +157,187 @@
                     jawapan5: "",
                     jawapan6: "",
                 },
-                soalan2: "",
-                soalan3: "",
-                soalan4: "",
-                soalan5: "",
-                soalan6: "",
-                soalan7: "",
-                soalan8: "",
-                soalan9: "",
-                soalan10: "",
+                soalan2: {
+                    jawapan1: "",
+                    jawapan2: "",
+                    jawapan3: "",
+                    jawapan4: "",
+                },
+                soalan3: {
+                    jawapan1: "",
+                    jawapan2: "",
+                    jawapan3: "",
+                    jawapan4: "",
+                },
+                soalan4: {
+                    jawapan1: "",
+                    jawapan2: "",
+                    jawapan3: "",
+                    jawapan4: "",
+                },
+                soalan5: {
+                    jawapan1: "",
+                    jawapan2: "",
+                    jawapan3: "",
+                    jawapan4: "",
+                }
             },
-            watch: {}
+            watch: {
+                'soalan1.jawapan1': function (value) {
+                    Swal.fire(
+                        'احسنت',
+                        '',
+                        'success'
+                    )
+                },
+                'soalan1.jawapan2': function (value) {
+                    Swal.fire(
+                        'لا بأس',
+                        '',
+                        'error'
+                    )
+                },
+                'soalan1.jawapan3': function (value) {
+                    Swal.fire(
+                        'احسنت',
+                        '',
+                        'success'
+                    )
+                },
+                'soalan1.jawapan4': function (value) {
+                    Swal.fire(
+                        'احسنت',
+                        '',
+                        'success'
+                    )
+                },
+                'soalan1.jawapan5': function (value) {
+                    Swal.fire(
+                        'احسنت',
+                        '',
+                        'success'
+                    )
+                },
+                'soalan1.jawapan6': function (value) {
+                    Swal.fire(
+                        'لا بأس',
+                        '',
+                        'error'
+                    )
+                },
+                'soalan2.jawapan1': function (value) {
+                    Swal.fire(
+                        'احسنت',
+                        '',
+                        'success'
+                    )
+                },
+                'soalan2.jawapan2': function (value) {
+                    Swal.fire(
+                        'لا بأس',
+                        '',
+                        'error'
+                    )
+                },
+                'soalan2.jawapan3': function (value) {
+                    Swal.fire(
+                        'لا بأس',
+                        '',
+                        'error'
+                    )
+                },
+                'soalan2.jawapan4': function (value) {
+                    Swal.fire(
+                        'احسنت',
+                        '',
+                        'success'
+                    )
+                },
+                'soalan3.jawapan1': function (value) {
+                    Swal.fire(
+                        'لا بأس',
+                        '',
+                        'error'
+                    )
+                },
+                'soalan3.jawapan2': function (value) {
+                    Swal.fire(
+                        'احسنت',
+                        '',
+                        'success'
+                    )
+                },
+                'soalan3.jawapan3': function (value) {
+                    Swal.fire(
+                        'احسنت',
+                        '',
+                        'success'
+                    )
+                },
+                'soalan3.jawapan4': function (value) {
+                    Swal.fire(
+                        'لا بأس',
+                        '',
+                        'error'
+                    )
+                },
+                'soalan4.jawapan1': function (value) {
+                    Swal.fire(
+                        'احسنت',
+                        '',
+                        'success'
+                    )
+                },
+                'soalan4.jawapan2': function (value) {
+                    Swal.fire(
+                        'لا بأس',
+                        '',
+                        'error'
+                    )
+                },
+                'soalan4.jawapan3': function (value) {
+                    Swal.fire(
+                        'لا بأس',
+                        '',
+                        'error'
+                    )
+                },
+                'soalan4.jawapan4': function (value) {
+                    Swal.fire(
+                        'احسنت',
+                        '',
+                        'success'
+                    )
+                },
+                'soalan5.jawapan1': function (value) {
+                    Swal.fire(
+                        'احسنت',
+                        '',
+                        'success'
+                    )
+                },
+                'soalan5.jawapan2': function (value) {
+                    Swal.fire(
+                        'احسنت',
+                        '',
+                        'success'
+                    )
+                },
+                'soalan5.jawapan3': function (value) {
+                    Swal.fire(
+                        'احسنت',
+                        '',
+                        'success'
+                    )
+                },
+                'soalan5.jawapan4': function (value) {
+                    Swal.fire(
+                        'لا بأس',
+                        '',
+                        'error'
+                    )
+                }
+            }
         });
     </script>
 </body>
